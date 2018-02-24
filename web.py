@@ -8,4 +8,4 @@ def page():
   return render_template('index.html')
 
 if __name__ == '__main__':
-  app.run(port=8080)
+  app.run(host='192.168.1.3',port=5050)
