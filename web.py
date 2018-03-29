@@ -17,6 +17,13 @@ def login():
             		return redirect(url_for('protected'))
 	return render_template('login.html')
 
+@app.route('/signup', methods = ['GET','POST'])
+def signup():
+ 	return render_template('signup.html')
+		
+
+
+
 @app.route('/protected')
 def protected():
     if g.user:
@@ -44,9 +51,5 @@ def dropsession():
 
 
 if __name__ == '__main__':
-<<<<<<< HEAD
   app.run()
-=======
-  app.run(host='192.168.1.3',port=5050)
 
->>>>>>> fbb52f36de445c84b714a1dad851fb68f2129a6d
